@@ -97,7 +97,6 @@ public class TestHofDownload {
         assertEquals("products array is empty on empty request", 0, root.getJSONArray("products").length());
         assertNotEquals("products array is empty on empty request, and not by accident", 1, root.getJSONArray("products").length());
         assertNotEquals("products array is empty on empty request, and not by accident", 10, root.getJSONArray("products").length());
-        assertNotEquals("products array is empty on empty request, and not by accident", 10, root.getJSONArray("products").length());
 
     }
 
