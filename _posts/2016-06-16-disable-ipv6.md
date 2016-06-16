@@ -31,4 +31,4 @@ net.ipv6.conf.eth0.disable_ipv6 = 1
 
 
 
-__Source: http://ask.xmodulo.com/disable-ipv6-linux.html__
+_Source: http://ask.xmodulo.com/disable-ipv6-linux.html_
