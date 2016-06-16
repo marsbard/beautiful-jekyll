@@ -17,7 +17,7 @@ echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
 You can replace `all` with a particular interface if you like, like `eth0`
 or `br0` for example.
 
-To make the change permanent, edit `/etc/sysctl.conf' and add these lines:
+To make the change permanent, edit `/etc/sysctl.conf` and add these lines:
 
 ```
 # to disable IPv6 on all interfaces system wide
@@ -31,4 +31,4 @@ net.ipv6.conf.eth0.disable_ipv6 = 1
 
 
 
-Source: http://ask.xmodulo.com/disable-ipv6-linux.html
+__Source: http://ask.xmodulo.com/disable-ipv6-linux.html__
