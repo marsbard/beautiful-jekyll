@@ -30,4 +30,4 @@ net.ipv6.conf.eth0.disable_ipv6 = 1
 
 eek
 
-_(Source)[http://ask.xmodulo.com/disable-ipv6-linux.html]_
+_[Source](http://ask.xmodulo.com/disable-ipv6-linux.html)_
