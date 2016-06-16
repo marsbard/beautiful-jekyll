@@ -83,7 +83,7 @@ public class TestHofDownload {
             except here instead we get a response and use its asString() value to create the json object, you can also
             do string assertions here for negative matching: http://stackoverflow.com/a/26514466/370191
 
-            The expected response for this call is this or equivalent: `{"products" : []}`
+            The expected response for this call is this or equivalent: '{"products" : []}'
 
 
          */
