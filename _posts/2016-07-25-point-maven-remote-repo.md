@@ -2,7 +2,7 @@
 layout: post
 title: How to point maven to an alternative artifact provider
 subtitle: Use your own custom artifactory or nexus server
-bigimg: /img/path.jpg
+bigimg: /img/mijas.jpg
 ---
 
 This is probably in a hundred other places on the net, but I find myself using it again and again and
