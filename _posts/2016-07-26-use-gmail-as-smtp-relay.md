@@ -23,7 +23,8 @@ within fewer than 20 minutes.
 This setup uses postfix on the local server but if you have a bunch of servers that need 
 email services you might consider setting up a dedicated relay server and pointing each server
 application to that for mail services. In this case however, when the application asks
-for mail server configuration, we'll use `localhost` without any authentication.
+for mail server configuration, we'll use `localhost` without any authentication. The port
+will be the standard SMTP port, `25`.
 
 First you need a dedicated Gmail account to use for forwarding. Head over to [Gmail](https://gmail.com), 
 sign out if you're logged in, and then select 'Add account' to create a new email account.
@@ -31,13 +32,25 @@ I suggest something like `<projectname>.smtp@gmail.com` so you can be clear abou
 is coming from. Make a note of the password (of course!).
 
 Next you'll need to install postfix. On Debian based systems this can be done with 
-`apt-get install postfix libsasl2-modules`. Now you'll need to edit the postfix configuration
-file, `/etc/postfix/main.cf`. You'll probably want to edit `myhostname` to reflect the
-domain name of the server you are installing onto. Next, change `relayhost` to 
-`[smtp.gmail.com]:587`. 
+`apt-get install postfix`. Choose 'Internet Site' in the first configuration dialog and set the
+server address in the next. Probably the default is fine.
+
+Now you'll need to edit the postfix configuration file, `/etc/postfix/main.cf`. You'll probably 
+want to edit `myhostname` to reflect the domain name of the server that you set in the postfix 
+configuration dialog. Next, set `relayhost` to `[smtp.gmail.com]:587`. 
 
 For `smtp_sasl_password_maps` set the value to `hash:/etc/postfix/relay_passwd`. We'll 
 create this file in a moment and generate a map file from it that postfix can use.
+
+Add the following lines if they aren't there. If they are there, just change `smtp_sasl_password_maps`
+to match the line here:
+
+```
+smtp_use_tls = yes 
+smtp_sasl_auth_enable = yes
+smtp_sasl_password_maps = hash:/etc/postfix/relay_passwd
+smtp_sasl_security_options =
+```
 
 Ensure that `mydestination` has the name of this machine, not just
 as localhost, and if you have a fully qualified domain name, e.g. `application.my.domain` then
@@ -52,10 +65,10 @@ with the Gmail user you created above, and `[[PASSWORD]]` with the password.
 [smtp.gmail.com]:587 [[USER]]@gmail.com:[[PASSWORD]]
 ```
 
-Now simply run `postmap /etc/postfix/relay_passwd`. This will create a file `relay_passwd.db`
+Finally run `postmap /etc/postfix/relay_passwd`. This will create a file `relay_passwd.db`
 which postfix can use directly.
 
-That's it, should be all good to go now. Reload the postfix service with `system postfix reload`
+That's it, should be all good to go now. Reload the postfix service with `systemctl reload postfix`
 (if you're using an older OS you might need `/etc/init.d/postfix reload`) and try to send an 
 email from your application (remember, set the email server to `localhost` with no authentication).
 If you keep an eye on `/var/log/mail.log` you should see the mail get accepted locally and 
