@@ -2,7 +2,7 @@
 layout: post
 title: REST Assured with Alfresco
 subtitle: Integration testing of REST web scripts
-bigimg: /img/mijas.jpg
+bigimg: /img/tropicbeach.jpg
 ---
 
 Here's a suggestion for integration testing REST webscripts using the 

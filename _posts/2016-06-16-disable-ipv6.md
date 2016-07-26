@@ -2,7 +2,7 @@
 layout: post
 title: Disabling IPv6 on Linux
 subtitle: Those inexplicable network timeouts.... >.<
-bigimg: /img/mijas.jpg
+bigimg: /img/tropicbeach.jpg
 ---
 
 When you're looking at a seemingly stuck network process and you realise
