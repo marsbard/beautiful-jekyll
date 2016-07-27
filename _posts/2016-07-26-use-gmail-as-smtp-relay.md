@@ -39,9 +39,6 @@ Now you'll need to edit the postfix configuration file, `/etc/postfix/main.cf`. 
 want to edit `myhostname` to reflect the domain name of the server that you set in the postfix 
 configuration dialog. Next, set `relayhost` to `[smtp.gmail.com]:587`. 
 
-For `smtp_sasl_password_maps` set the value to `hash:/etc/postfix/relay_passwd`. We'll 
-create this file in a moment and generate a map file from it that postfix can use.
-
 Add the following lines if they aren't there. If they are there, just change `smtp_sasl_password_maps`
 to match the line here:
 
