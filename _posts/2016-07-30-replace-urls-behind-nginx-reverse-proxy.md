@@ -6,8 +6,8 @@ bigimg: /img/tropicbeach.jpg
 ---
 
 I've got a bunch of servers behind an nginx reverse proxy, one in particular, 
-(Jenkins)[https://jenkins.io] publishes the results of its builds to an 
-(Artifactory)[https://www.jfrog.com/artifactory/]. To do so, in its config
+[Jenkins](https://jenkins.io) publishes the results of its builds to an 
+[Artifactory](https://www.jfrog.com/artifactory/). To do so, in its config
 I had to put the URL of the artifactory server, naturally this is in the 
 private IP range 192.x.x.x behind the nginx proxy.
 
