@@ -1,4 +1,6 @@
 ---
+comments: true
+
 layout: post
 title: How to point maven to an alternative artifact provider
 subtitle: Use your own custom artifactory or nexus server

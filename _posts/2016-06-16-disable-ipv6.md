@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: post
 title: Disabling IPv6 on Linux
 subtitle: Those inexplicable network timeouts.... >.<
@@ -29,3 +30,19 @@ net.ipv6.conf.eth0.disable_ipv6 = 1
 ```
 
 _[Original Source](http://ask.xmodulo.com/disable-ipv6-linux.html)_
+
+
+*EDIT* Well I got to a server where this didn't seem to work, my apps were
+still listening on IPv6 addresses despite the fact that the system was 
+configured not to use them. Then I found [this advice](http://askubuntu.com/a/748788/33804)
+to blacklist the ipv6 module...
+
+```
+$ cat <<EOF >/etc/modprobe.d/blacklist-ipv6.conf
+# To turn off IPv6, though you don't need too.
+# But anyways.
+blacklist ipv6
+
+# eof
+EOF
+```

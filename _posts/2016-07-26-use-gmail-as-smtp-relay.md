@@ -1,8 +1,10 @@
 ---
+comments: true
 layout: post
 title: How to use Gmail as an SMTP relay with Postfix
 subtitle: If your mails are getting blackholed you need this!
 bigimg: /img/tropicbeach.jpg
+disqus: marsbard
 ---
 
 Many times you want to be able to send emails from a server that you've set up, but unless

@@ -3,6 +3,8 @@ layout: post
 subtitle: Replacing URLs in content served behind nginx reverse proxy
 title: Replace URLs with nginx sub_filter
 bigimg: /img/tropicbeach.jpg
+disqus: marsbard
+comments: true
 ---
 
 I've got a bunch of servers behind an nginx reverse proxy, one in particular, 
