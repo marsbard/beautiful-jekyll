@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Queue Queue Barney McGrew
-#subtitle: Cuthbert Dribble and Grob
+subtitle: Cuthbert Dribble and Grob
 bigimg: /img/tropicbeach.jpg
 disqus: marsbard
 comments: true

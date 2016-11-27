@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Move KVM image to a new host
-#subtitle: An aide-memoire for me with KVM/qemu
+subtitle: An aide-memoire for me with KVM/qemu
 bigimg: /img/tropicbeach.jpg
 disqus: marsbard
 comments: true
